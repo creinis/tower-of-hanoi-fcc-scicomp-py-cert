@@ -159,5 +159,28 @@ def move(n, source, auxiliary, target):
     # display starting configuration
     print(rods)
 
+# Step 17
+
+# The allowed disk movements between the rods exhibit a repetitive pattern occurring every three moves. 
+# For example, movements between rod A and rod C are allowed on the first, the fourth and the seventh move, 
+# where the remainder of the division between the move number and 3 is equal to 1.
+
+# Inside the previously created for loop, replace the existing print() call with an if statement that is 
+# triggered when (i + 1) % 3 == 1. 
+# Within this if statement, print f'Move {i + 1} allowed between {source} and {target}' using an f-string. 
+# Please, note that i + 1 is the move number since i is zero during the first iteration.
+
+def move(n, source, auxiliary, target):
+    # display starting configuration
+    print(rods)
+    for i in range(number_of_moves):
+        if (i + 1) % 3 == 1:
+            print(f'Move {i + 1} allowed between {source} and {target}')
+
+
+
+
+
+
 
 
