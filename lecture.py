@@ -440,5 +440,25 @@ if remainder == 1:
         print(f'Move {i + 1} allowed between {source} and {target}')
         make_allowed_move(source, target)
 
+# Step 39
+
+# If the number of disks is even and the remainder equals 1, the move is allowed between the source rod 
+# and the auxiliary rod. Add an else clause to print the allowed movement and call make_allowed_move() 
+# with the correct arguments.
+
+# If you look at the output, you can see that the execution stops at the third move because of an IndexError. 
+# This happens because the code is still incomplete and needs an else clause that you will be writing soon. 
+# To make it work, turn your make_allowed_move() call into a comment.
+
+        if remainder == 1:
+            if n % 2 != 0:
+                print(f'Move {i + 1} allowed between {source} and {target}')
+                make_allowed_move(source, target)
+            else:
+                print(f'Move {i + 1} allowed between {source} and {auxiliary}')
+                # make_allowed_move(source, auxiliary)
+
+
+
 
 
