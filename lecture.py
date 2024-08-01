@@ -549,5 +549,38 @@ def move(n, source, auxiliary, target):
 # initiate call from source A to target C with auxiliary B
 move(NUMBER_OF_DISKS, 'A', 'B', 'C')
 
+# Step 42
+
+# That's all for the iterative solution. From now on you are going to build a function that makes use of a recursive approach. 
+# Recursion is when a function calls itself. In this case, you are going to use recursion to calculate smaller versions of the same problem.
+# Delete the whole body of the move function except for the comment and the first print call. Leave the function declaration as is.
+
+# Step 43
+
+# You won't need make_allowed_move and number_of_moves, either. Delete the whole function and the variable.
+
+# Step 44
+
+# To solve the puzzle with recursion, the first thing to do is break the original problem down into smaller sub-problems.
+
+# The final configuration with n disks piled up to the third rod in decreasing order can be obtained by moving:
+
+#    n - 1 disks from the source to the auxiliary rod
+#    the largest disk from the source to the target
+#    and then the n - 1 disks from the auxiliary rod to the target.
+
+# So, the first thing the move function should do is calling itself with n - 1 as the first argument. 
+# But if you try to do so without defining a base case, you will get a RecursionError. 
+# This happens because the function keeps calling itself indefinitely.
+
+# Before your comment and your print() call, add the recursive function call with n - 1 as the first argument 
+# and make sure the function body executes only when n is greater than zero. For now, leave the other arguments 
+# in the same order.
+
+def move(n, source, auxiliary, target):
+    if n > 0:
+        move(n-1, source, auxiliary, target)
+        # display starting configuration
+        print(rods, '\n')
 
 
