@@ -690,5 +690,26 @@ def move(n, source, auxiliary, target):
 # initiate call from source A to target C with auxiliary B
 move(NUMBER_OF_DISKS, A, B, C)
 
+# Step 53
 
+# Although recursion could sometimes be less easy to understand, it gives you the power to create more concise code. In this case, you don't even need to differentiate between even and odd numbers of disks.
+
+# Set NUMBER_OF_DISKS to 5 and check the output.
+
+# Step 54
+
+# There's still one thing you can do to improve the readability of your code.
+
+# Modify your if to execute when n is less than or equal to zero and add a return statement 
+# to stop the function execution.
+
+def move(n, source, auxiliary, target):
+    if n <= 0:
+        return
+
+# Step 55
+
+# As a final step, reduce the indentation level of all the code after the return statement.
+
+# Well done. You have completed the Tower of Hanoi practice project.
 
