@@ -306,6 +306,18 @@ def move(n, source, auxiliary, target):
                 print(f'Moving disk {rods[target][-1]} from {target} to {source}')
                 rods[source].append(rods[target].pop())
 
+# Step 28
+
+# Outside the else block, add a comment saying display our progress and print the content of the lists to check that everything is working.
+
+            if forward:
+                print(f'Moving disk {rods[source][-1]} from {source} to {target}')
+                rods[target].append(rods[source].pop())
+            else:
+                print(f'Moving disk {rods[target][-1]} from {target} to {source}')
+                rods[source].append(rods[target].pop())
+            # display our progress
+            print(rods)
 
 
 
