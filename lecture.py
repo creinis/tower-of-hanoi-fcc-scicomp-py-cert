@@ -606,6 +606,32 @@ def move(n, source, auxiliary, target):
         # display starting configuration
         print(rods, '\n')
 
+# Step 47
 
+# Before appending the last element to the target, add a comment saying move the nth disk from source to target.
+
+# Step 48
+
+# Now, change the comment above the print() call into display our progress.
+
+# Step 49
+
+# At first, the recursive call you have just added deals with the sub-problem of moving n - 1 disks to the second rod.
+
+# For that reason, the target argument corresponds to your second rod, while the auxiliary argument is 
+# the third rod. Keep in mind that those will keep swapping as the recursion proceeds.
+
+# Fix the arguments order exchanging target and auxiliary in your recursive call.
+
+def move(n, source, auxiliary, target):
+    if n > 0:
+        # move n - 1 disks from source to auxiliary, so they are out of the way
+        move(n - 1, source, target, auxiliary)
+        
+        # move the nth disk from source to target
+        rods[target].append(rods[source].pop())
+        
+        # display our progress
+        print(rods, '\n')
 
 
