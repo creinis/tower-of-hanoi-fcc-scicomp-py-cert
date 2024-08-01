@@ -425,5 +425,20 @@ def move(n, source, auxiliary, target):
     # display starting configuration
     print(rods, '\n')
 
+# Step 37
+
+# The iterative solution of Tower of Hanoi might seem complete, but change the number of disks to 4 
+# and look at the output.
+
+# Step 38
+
+# The conditionals you wrote previously are only valid for odd numbers of disks.
+# Add a nested if to execute when n is odd, and add one indent level to your print() and make_allowed_move() calls.
+
+if remainder == 1:
+    if n % 2 != 0:
+        print(f'Move {i + 1} allowed between {source} and {target}')
+        make_allowed_move(source, target)
+
 
 
