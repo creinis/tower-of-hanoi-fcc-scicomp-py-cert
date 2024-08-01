@@ -238,7 +238,18 @@ def move(n, source, auxiliary, target):
         elif remainder == 0:
             print(f'Move {i + 1} allowed between {auxiliary} and {target}')
 
+# Step 23
 
+# When target is empty, the disk should be moved necessarily from source to target.
+
+# After the declaration of forward, add an if statement to check if rods[target] is empty. If it is, 
+# change forward to True.
+
+        if remainder == 1:
+            print(f'Move {i + 1} allowed between {source} and {target}')
+            forward = False
+            if rods[target] == []:
+                forward = True
 
 
 
