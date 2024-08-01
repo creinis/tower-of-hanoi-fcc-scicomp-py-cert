@@ -458,6 +458,22 @@ if remainder == 1:
                 print(f'Move {i + 1} allowed between {source} and {auxiliary}')
                 # make_allowed_move(source, auxiliary)
 
+# Step 40
+
+# Now you need to do the same with your elif statement: put the print() and make_allowed_move() calls 
+# inside an if statement to execute when n is odd.
+
+# Also, turn the # make_allowed_move(source, auxiliary) comment into code.
+
+        else:
+            print(f'Move {i + 1} allowed between {source} and {auxiliary}')
+            make_allowed_move(source, auxiliary)            
+
+elif remainder == 2:
+    if n % 2 != 0:
+        print(f'Move {i + 1} allowed between {source} and {auxiliary}')
+        make_allowed_move(source, auxiliary)
+
 
 
 
