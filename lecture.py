@@ -251,5 +251,18 @@ def move(n, source, auxiliary, target):
             if rods[target] == []:
                 forward = True
 
+#  Step 24
+
+# The other case in which you have to move the disk necessarily from source to target is when the source 
+# list is not empty and the last disk in source is lower than the last disk in target.
+
+# Add an elif statement to check this condition. Then, set the forward variable to True if the condition is met.
+
+            if rods[target] == []:
+                forward = True
+            elif rods[source] and rods[source][-1] < rods[target][-1]:
+                forward = True
+
+
 
 
