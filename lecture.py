@@ -42,6 +42,20 @@ rods = {
 
 print(type(rods['A']))
 
+# Step 5
+
+# The range() function returns an immutable sequence of numbers. 
+# As you can see, the data type of rods['A'] is range, but you want it to be a list.
+
+# Pass your range() call to the list() function to do that.
+
+rods = {
+    'A': list(range(3, 0, -1)),
+    'B': [],
+    'C': []
+}
+print(type(rods['A']))
+
 
 
 
