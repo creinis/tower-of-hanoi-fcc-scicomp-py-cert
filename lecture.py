@@ -263,6 +263,22 @@ def move(n, source, auxiliary, target):
             elif rods[source] and rods[source][-1] < rods[target][-1]:
                 forward = True
 
+# Step 25
+
+# Next, below the nested elif statement, add another if statement that should be executed when forward is True. 
+# Inside this conditional, print the following f-string: f'Moving disk {rods[source][-1]} from {source} to {target}'.
+
+        if remainder == 1:
+            print(f'Move {i + 1} allowed between {source} and {target}')
+            forward = False
+            if not rods[target]:
+                forward = True
+            elif rods[source] and rods[source][-1] < rods[target][-1]:
+                forward = True
+            if forward == True:
+                print(f'Moving disk {rods[source][-1]} from {source} to {target}')
+
+
 
 
 
