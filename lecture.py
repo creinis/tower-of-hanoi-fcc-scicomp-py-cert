@@ -294,6 +294,18 @@ def move(n, source, auxiliary, target):
                 print(f'Moving disk {rods[source][-1]} from {source} to {target}')
                 rods[target].append(rods[source].pop())
 
+# Step 27
+
+# When forward is False, the disk has to be moved in the opposite direction. 
+# Write an else clause for that. Print the move and change the content of the lists accordingly.
+
+            if forward:
+                print(f'Moving disk {rods[source][-1]} from {source} to {target}')
+                rods[target].append(rods[source].pop())
+            else:
+                print(f'Moving disk {rods[target][-1]} from {target} to {source}')
+                rods[source].append(rods[target].pop())
+
 
 
 
