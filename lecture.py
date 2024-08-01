@@ -203,7 +203,22 @@ def move(n, source, auxiliary, target):
         if remainder == 1:
             print(f'Move {i + 1} allowed between {source} and {target}')
 
+# Step 20
 
+# When the remainder of the move number divided by 3 is equal to 2, the movement is allowed between 
+# A and B (the source and the auxiliary rods).
+
+# Add an elif statement for that. Then, print the appropriate string if the condition is met.
+
+def move(n, source, auxiliary, target):
+    # display starting configuration
+    print(rods)
+    for i in range(number_of_moves):
+        remainder = (i + 1) % 3
+        if remainder == 1:
+            print(f'Move {i + 1} allowed between {source} and {target}')
+        elif remainder == 2:
+            print(f'Move {i + 1} allowed between {source} and {auxiliary}')
 
 
 
