@@ -634,4 +634,29 @@ def move(n, source, auxiliary, target):
         # display our progress
         print(rods, '\n')
 
+# Step 50
+
+# In a previous step, you wrote the code to move the largest disk of the sub-problem to the target rod.
+
+# Now, all you need to do is add another recursive call to move the n - 1 disks you have already displaced. 
+# Copy the first recursive call and paste it at the end of the if block.
+
+# Note that the function arguments are not in the right order. Try to figure out the correct order.
+
+def move(n, source, auxiliary, target):
+    if n > 0:
+        # move n - 1 disks from source to auxiliary, so they are out of the way
+        move(n - 1, source, target, auxiliary)
+        
+        # move the nth disk from source to target
+        rods[target].append(rods[source].pop())
+        
+        # display our progress
+        print(rods, '\n')
+        
+        move(n - 1, auxiliary, source, target)
+    
+
+
+
 
