@@ -76,6 +76,18 @@ print(type(rods['A']))
 def move():
     pass
 
+# Step 8
+
+# At the top of your code, declare a variable named NUMBER_OF_DISKS to store the number of disks and give it 
+# the value of 3. 
+# Then, replace the first argument passed in to the range() function with your new variable.
+
+NUMBER_OF_DISKS = 3
+rods = {
+    'A': list(range(NUMBER_OF_DISKS, 0, -1)),
+    'B': [],
+    'C': []
+}
 
 
 
