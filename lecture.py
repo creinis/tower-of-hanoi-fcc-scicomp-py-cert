@@ -337,5 +337,82 @@ def make_allowed_move():
 def make_allowed_move(rod1, rod2):
     pass
 
+# Step 31
+
+# It's time to move some code from the move() function to the make_allowed_move() function. 
+# Move the code nested inside the first if statement (except the first print() call) to your new function. 
+# Pay close attention to the indentation. Don't forget to remove the pass keyword.
+
+def make_allowed_move(rod1, rod2):
+    forward = False
+    if not rods[target]:
+        forward = True
+    elif rods[source] and rods[source][-1] < rods[target][-1]:
+        forward = True              
+    if forward:
+        print(f'Moving disk {rods[source][-1]} from {source} to {target}')
+        rods[target].append(rods[source].pop())
+    else:
+        print(f'Moving disk {rods[target][-1]} from {target} to {source}')
+        rods[source].append(rods[target].pop())
+    
+    # display our progress
+    print(rods)
+
+def move(n, source, auxiliary, target):
+    # display starting configuration
+    print(rods)
+    for i in range(number_of_moves):
+        remainder = (i + 1) % 3
+        if remainder == 1:
+            print(f'Move {i + 1} allowed between {source} and {target}')
+
+# Step 32
+
+# make_allowed_move() takes in rod1 and rod2 as parameters. You need a little refactoring here. 
+# Change every occurrence of source into rod1.
+
+# Step 33
+
+# Now change each occurrence of target into rod2.
+
+def make_allowed_move(rod1, rod2):    
+    forward = False
+    if not rods[rod2]:
+        forward = True
+    elif rods[rod1] and rods[rod1][-1] < rods[rod2][-1]:
+        forward = True              
+    if forward:
+        print(f'Moving disk {rods[rod1][-1]} from {rod1} to {rod2}')
+        rods[rod2].append(rods[rod1].pop())
+    else:
+        print(f'Moving disk {rods[rod2][-1]} from {rod2} to {rod1}')
+        rods[rod1].append(rods[rod2].pop())
+    
+    # display our progress
+    print(rods)
+
+# Step 34
+
+# Now call make_allowed_move() and pass in source and target as the arguments.
+
+if remainder == 1:
+    print(f'Move {i + 1} allowed between {source} and {target}')
+    make_allowed_move(source, target) 
+
+# Step 35
+
+# Call the make_allowed_move() function again inside the two elif clauses, and pass in the correct arguments.
+
+if remainder == 1:
+    print(f'Move {i + 1} allowed between {source} and {target}')
+    make_allowed_move(source, target)
+elif remainder == 2:
+    print(f'Move {i + 1} allowed between {source} and {auxiliary}')
+    make_allowed_move(source, auxiliary)
+elif remainder == 0:
+    print(f'Move {i + 1} allowed between {auxiliary} and {target}')
+    make_allowed_move(auxiliary, target)
+
 
 
