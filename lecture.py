@@ -474,6 +474,18 @@ elif remainder == 2:
         print(f'Move {i + 1} allowed between {source} and {auxiliary}')
         make_allowed_move(source, auxiliary)
 
+# Step 41
+
+# Finally, add an else clause that prints the allowed move and call make_allowed_move. 
+# Try to figure out the correct arguments.
+
+    elif remainder == 2:
+        if n % 2 != 0:
+            print(f'Move {i + 1} allowed between {source} and {auxiliary}')
+            make_allowed_move(source, auxiliary)
+        else:
+            print(f'Move {i + 1} allowed between {source} and {target}')
+            make_allowed_move(source, target)
 
 
 
