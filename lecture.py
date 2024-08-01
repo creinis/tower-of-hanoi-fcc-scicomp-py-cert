@@ -106,5 +106,26 @@ number_of_moves = 2**NUMBER_OF_DISKS -1
 
 print(number_of_moves)
 
+# Step 11
+
+# Now you can remove your print() call. 
+# Then, inside the move() function, remove the pass keyword and print the content of your rods dictionary.
+
+# Step 12
+
+# Now call your function and see the output on the terminal.
+
+NUMBER_OF_DISKS = 3
+number_of_moves = 2**NUMBER_OF_DISKS - 1
+rods = {
+    'A': list(range(NUMBER_OF_DISKS, 0, -1)),
+    'B': [],
+    'C': []
+}
+def move():
+    print(rods)
+move()
+
+
 
 
