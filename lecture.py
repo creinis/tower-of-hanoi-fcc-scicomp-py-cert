@@ -89,6 +89,17 @@ rods = {
     'C': []
 }
 
+# Step 9
+
+# The Tower of Hanoi puzzle can be solved in 2n - 1 moves, where n is the number of disks. 
+# Declare a variable named number_of_moves and assign the total number of moves to this variable.
+
+# The power operator in Python is **.
+
+NUMBER_OF_DISKS = 3
+number_of_moves = 2**NUMBER_OF_DISKS -1
+
+
 
 
 
