@@ -99,7 +99,12 @@ rods = {
 NUMBER_OF_DISKS = 3
 number_of_moves = 2**NUMBER_OF_DISKS -1
 
+# Step 10
 
+# Print the variable you declared in the previous step and feel free to change the number of disks 
+# to see how fast the required minimum number of moves increases.
+
+print(number_of_moves)
 
 
 
