@@ -583,4 +583,29 @@ def move(n, source, auxiliary, target):
         # display starting configuration
         print(rods, '\n')
 
+# Step 45
+
+# Before your recursive call, add a comment saying move n - 1 disks from source to auxiliary, 
+# so they are out of the way.
+
+# Step 46
+
+# The steps of moving n - 1 disks can be broken down further until only a single disk is considered. 
+# This will be the first move occurring. After the first move occurs, the following moves are generated 
+# by the unwinding of the recursive calls. Keep in mind that in each recursive step the role played by 
+# the rods changes between source, target, and auxiliary.
+
+# For now, each recursive call prints the rods dictionary without performing any changes to the lists. 
+# Before the print() call, remove the last element from the rods[source] list and append it to the rods[target] list.
+
+def move(n, source, auxiliary, target):
+    if n > 0:
+        # move n - 1 disks from source to auxiliary, so they are out of the way
+        move(n - 1, source, auxiliary, target)
+        rods[target].append(rods[source].pop())
+        # display starting configuration
+        print(rods, '\n')
+
+
+
 
