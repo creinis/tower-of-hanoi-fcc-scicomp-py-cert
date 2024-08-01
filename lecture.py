@@ -656,7 +656,39 @@ def move(n, source, auxiliary, target):
         
         move(n - 1, auxiliary, source, target)
     
+# Step 51
 
+# Above the second move call, add one last comment saying move the n - 1 disks that we left on auxiliary onto target.
+
+# Step 52
+
+# Now, delete the rods dictionary and turn its keys into the variables A, B, and C, respectively, 
+# keeping their values. 
+# Refactor your code to reflect these changes. 
+# If you see the output on the terminal, you correctly did this step.
+
+NUMBER_OF_DISKS = 4
+A = list(range(NUMBER_OF_DISKS, 0, -1))
+B = []
+C = []
+
+
+def move(n, source, auxiliary, target):
+    if n > 0:
+        # move n - 1 disks from source to auxiliary, so they are out of the way
+        move(n - 1, source, target, auxiliary)
+        
+        # move the nth disk from source to target
+        target.append(source.pop())
+        
+        # display our progress
+        print(A, B, C, '\n')
+        
+        # move the n - 1 disks that we left on auxiliary onto target
+        move(n - 1,  auxiliary, source, target)
+              
+# initiate call from source A to target C with auxiliary B
+move(NUMBER_OF_DISKS, A, B, C)
 
 
 
