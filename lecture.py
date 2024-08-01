@@ -319,6 +319,23 @@ def move(n, source, auxiliary, target):
             # display our progress
             print(rods)
 
+# Step 29
+
+# As you can see, disk 1 is going back and forth every three moves. 
+# This happens because you still need to take care of movements between the other rods. 
+# Instead of repeating the same code you wrote during the previous few steps and changing the rods, 
+# it would be better to move that code inside a function to call in each conditional statement. 
+# Declare an empty function named make_allowed_move() and don't forget the pass keyword.
+
+def make_allowed_move():
+    pass
+
+# Step 30
+
+# Add two parameters called rod1 and rod2 to your new function.
+
+def make_allowed_move(rod1, rod2):
+    pass
 
 
 
