@@ -191,6 +191,18 @@ def move(n, source, auxiliary, target):
         if (i + 1) % 3 == 1:
             print(f'Move {i + 1} allowed between {source} and {target}')
 
+# Step 19
+
+# Now, replace the expression in the if condition with the remainder variable.
+
+def move(n, source, auxiliary, target):
+    # display starting configuration
+    print(rods)
+    for i in range(number_of_moves):
+        remainder = (i + 1) % 3
+        if remainder == 1:
+            print(f'Move {i + 1} allowed between {source} and {target}')
+
 
 
 
