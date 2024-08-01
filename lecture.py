@@ -56,6 +56,26 @@ rods = {
 }
 print(type(rods['A']))
 
+# Step 6
+
+# Now that the type is list as required, you can remove the print() call.
+
+# Step 7
+
+#The goal of the Tower of Hanoi is moving all the disks to the last rod. 
+# To do that, you must follow three simple rules:
+
+#    You can move only top-most disks
+#    You can move only one disk at a time
+#    You cannot place larger disks on top of smaller ones
+
+#Below your existing code, declare an empty function named move. 
+# Later on, you will use that function to move the disks between the rods. For now, to avoid errors, 
+# use the pass keyword inside the function body.
+
+def move():
+    pass
+
 
 
 
