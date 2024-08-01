@@ -278,6 +278,22 @@ def move(n, source, auxiliary, target):
             if forward == True:
                 print(f'Moving disk {rods[source][-1]} from {source} to {target}')
 
+# Step 26
+
+# After printing the move, you need to remove the last element from the source rod and append it to target rod. 
+# Use the .pop() method and the .append() method for that.
+
+        if remainder == 1:
+            print(f'Move {i + 1} allowed between {source} and {target}')
+            forward = False
+            if not rods[target]:
+                forward = True
+            elif rods[source] and rods[source][-1] < rods[target][-1]:
+                forward = True
+            if forward:
+                print(f'Moving disk {rods[source][-1]} from {source} to {target}')
+                rods[target].append(rods[source].pop())
+
 
 
 
