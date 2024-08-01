@@ -414,5 +414,16 @@ elif remainder == 0:
     print(f'Move {i + 1} allowed between {auxiliary} and {target}')
     make_allowed_move(auxiliary, target)
 
+# Step 36
+
+# It looks like it's working! But the output is not very readable. 
+# Print a new line character after printing the rods to fix that.
+
+    # display our progress
+    print(rods, '\n')
+def move(n, source, auxiliary, target):
+    # display starting configuration
+    print(rods, '\n')
+
 
 
