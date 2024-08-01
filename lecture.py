@@ -141,6 +141,23 @@ def move(n, source, auxiliary, target):
 
 move(NUMBER_OF_DISKS, 'A', 'B', 'C')
 
+# Step 14
+
+# Before your function call, write a comment saying initiate call from source A to target C with auxiliary B.
+
+# Step 16
+
+# At the end of this project, you will create a recursive solution to the Tower of Hanoi puzzle, 
+# but now you are going to explore an iterative approach to this problem.
+
+# Start by adding a for loop to your function that iterates through the number of moves and prints 
+# the current iteration number.
+
+def move(n, source, auxiliary, target):
+    for move in range(number_of_moves):
+        print(move)
+    # display starting configuration
+    print(rods)
 
 
 
